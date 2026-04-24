@@ -19,6 +19,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
 {
+    // Cukup gunakan satu backslash saja di depan URL
     if (config('app.env') !== 'local') {
         URL::forceScheme('https');
     }
